@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+aside{
+    /* border: 1px solid red; */
+    display: flex;
+    position: fixed; /**sol taraf sabitlicez */
+    left: 20px;
+    top: 0;
+    height: 100vh; /**heryeri kaplayacak border verdiğimiz alanada */
+    z-index: 1000; /** harita öne çıksın */
+    align-items: center;
+}
+
+.sidebar{
+    background-color: rgba(53, 52, 52, 0.6);
+    height: 90vh;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column; /**alt alta getir*/
+    margin-top: 80px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+.sidebar h1{
+    text-align: center;
+    background-color: rgba(53, 52, 52, 0.6);
+    border-radius: 10px;
+    padding: 5px;
+    font-family: "Edu SA Beginner", cursive;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-bottom: 10px;
+    
+}
+.sidebar:hover{
+    background: rgba(53, 52, 52, 1);
+}
+
+
+/*!FORM ALANI */
+form{
+    display: none;
+    flex-direction: column;
+}
+form .field{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+form .field input, select{
+    border: none;
+    outline: none;
+    padding: 5px; /*iç boşluk*/
+    border-radius: 10px;
+}
+form button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 6px;
+    border-radius: 10px;
+    background: black;
+    color: whitesmoke;
+    font-weight: bold;
+}
+/*! LİSTE ALANI */
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    white-space: nowrap; /*taşmaları engelliyor yazılarda*/
+    margin-top: 10px;
+    overflow: auto;
+    /* border: 1px solid red; */
+    height: 100%;
+    padding-right: 10px;
+}
+/** scrollbar özelliğidir aşağı yukarı*/
+ul::-webkit-scrollbar{
+    background: black;
+    border-radius: 10px;
+    width: 12.5px;
+
+}
+ul::-webkit-scrollbar-thumb{
+    background: gray;
+    border-radius: 10px;
+}
+li{
+    background: #575757;
+    display: flex;
+    justify-content: space-between; /*en sağ attırıyoruz*/
+    justify-content: center;
+    border-radius: 10px;
+    position: relative; /**position absolute kullanacağız*/
+}
+li div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+li div p{
+    border-bottom: 1px solid rgba(148, 148, 148, 0.3); /*p lere alt çizgi ekledik*/
+}
+li div p span{
+    font-weight: 900;
+}
+li #delete{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px;
+    margin: 3px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+li #delete:hover{
+    background: rgba(68, 68, 68, 0.3);
+    color: crimson;
+}
+li #fly{
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+li #fly:hover{
+    background: rgba(68, 68, 68, 0.3);
+    color: crimson;
+}
+#map { height: 100vh; }
